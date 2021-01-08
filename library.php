@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: text/html; charset=UTF-8');
+
 error_reporting(0);
 
 require __DIR__.'/vendor/autoload.php';
@@ -1598,7 +1598,7 @@ class formGenerator {
                 <td align='center'>".$borrowAble."</td>
                 <td><form method='post' action='library.php'><input style='display:none; heigth:0px; width:0px;' id='isbn' name='isbn' value='".$book->getIsbn()."'></input><button type='submit' name='changeToEditBook'>Bearbeiten</button></form></td>
                 <td><form method='post' action='library.php'><input style='display:none; heigth:0px; width:0px;' id='isbn' name='isbn' value='".$book->getIsbn()."'></input><button type='submit' name='borrowBook'>Ausleihen</button></form></td>
-                <td><form method='post' action='library.php'><input style='display:none; heigth:0px; width:0px;' id='isbn' name='isbn' value='".$book->getIsbn()."'></input><button type='submit' name='changeToGenPDF'>PDF Generieren</button></form></td>
+                <td><form method='post' action='library.php'><input style='display:none; heigth:0px; width:0px;' id='isbn' name='isbn' value='".$book->getIsbn()."'></input><button type='submit' name='changeToGenPDF'>PDF</button></form></td>
             </tr>";
         }
         $table = $table . "</table>";
@@ -1782,7 +1782,7 @@ class formGenerator {
                 </tr>
                 <tr>
                     <td><input style='display:none' type='text' id='bookIsbn' name='bookIsbn' value=".$bookIsbn."></input></td>
-                    <td><button name='confirmBorrow' type='submit'>Submit</button></td>
+                    <td><button name='confirmBorrow' type='submit'>Ausleihen</button></td>
                 </tr>
             </table></form>";
 
@@ -1797,7 +1797,7 @@ class formGenerator {
                 </tr>
                 <tr>
                     <td><input style='display:none' type='text' id='isbn' name='isbn' value=".$isbn."></input></td>
-                    <td><button name='genPDF' type='submit'>Submit</button></td>
+                    <td><button name='genPDF' type='submit'>Generiere</button></td>
                 </tr>
             </table></form>";
         
